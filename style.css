@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+.container{width: 85%; margin: 0 auto;}
+.form-container{width: 55%; margin: 0 auto;}
+
+.header{
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url('images/1\ \(1\).jpg');
+    background-size: cover;
+    background-position: center center;
+    color: white;
+}    
+.header .parent{
+    height: 95vh;                              
+    display: flex; 
+    justify-content: center; 
+    align-items: center ;
+    text-align: center;
+}
+.header .nav{
+    height: 5vh;                                
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.header .parent .alex h3{font-size: 1.5em;}
+.header .parent .alex h1{color: #fe305a; font-size: 5em;}
+.header .parent .alex h2{font-size:1.7em; font-weight: lighter;}
+
+.header .parent .alex h2{ 
+    animation: typing 4s infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    margin: 0 auto
+}
+@keyframes typing{
+    0%{
+       width: 100%
+    }
+    50%{
+       width: 50%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+.header .nav ul li{display: inline-block; margin-right: 15px; font-size: 1.2em; transition: 0.2s ease;}
+.header .nav .bold{color: #fe305a; font-size: 1.5em;}
+.header .nav .normal a:first-child{color: #fe305a;}
+.header .nav .normal a:not(first-child){color: white;}
+
+.header .nav ul li:hover{color: #fe305a; cursor: pointer;}
+
+
+
+.hello{
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+.hello .left, .hello .right{width: 45%;}
+.hello .right{padding: 90px 0;}
+.hello .right h2{margin-bottom: 30px; letter-spacing: 0.1em; font-size: 2em; border-left: 5px solid #fe305a; line-height: 0.7; padding-left: 10px;}
+.hello .right p{font-size: 1.1em; border-bottom: 1px dashed black; padding-bottom: 30px;}
+.hello .right ul{display: flex; flex-wrap: wrap; font-size: 1.1em; padding-top: 30px;}
+.hello .right ul li{list-style: none; width: 40%; margin-bottom: 20px;}
+.hello .right ul li span{font-weight: 600;}
+.hello .right button{transition: 0.5s; color: white; border: none; background-color: #fe305a; padding: 10px 25px; font-size: 1.2em; border-radius: 5px;}
+.hello .right button:hover{cursor: pointer; background-color: #EB2405;}
+.hello .right button:nth-of-type(2){margin-left: 10px;}
+
+
+.hello .left{position: relative;}
+.hello .left .inner{position: relative; height: 75%; width: 60%; top: 20%; left: 25%; overflow: hidden;}
+.hello .left .inner .image{
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    z-index: 2; 
+}
+.hello .left .inner .image img{width: 100%; height: 100%; border-radius: 5px;}
+.hello .left .bord{
+    height: 75%; width: 60%; top: 15%; left: 20%; 
+    border: 8px solid #545454;
+    border-radius: 5px; 
+    position: absolute; 
+    z-index: 1;
+}
+.hello .left .inner .cover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(48, 40, 40, 0.5);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+    bottom: -100%; 
+
+}
+.hello .left .inner .cover i{margin: 0 10px; color: white;}
+.hello .left .inner .cover i:hover{color: #EB2405; cursor: pointer; transition: 0.2s ease;}
+.hello .left .inner:hover .cover{bottom: 0;}   /*hover should be on .image only not all-image but .image not child if .image? what is the solution?*/
+
+
+
+
+.services{padding: 100px 0; background-color: #F0F0F0;}
+.services hr{background-color:#EB2405;  height: 1px;  margin: 3px auto; border: none;}
+.services .one{width: 70px;}
+.services .two{width: 160px;}
+.services .three{width: 70px; margin-bottom: 80px;}
+.services h1{text-align: center; margin-bottom: 10px; font-size: 40px;}
+.services .four{
+    display: flex;
+    text-align: center;
+}
+.services .four div{padding: 50px 5px; transition: 0.5s ease;}
+.services .four div:hover{background-color: white; box-shadow: 3px 10px 10px rgb(196, 193, 193);}
+.services .four i{font-size: 30px; color: #EB2405; margin-bottom: 20px;}
+.services .four h2{margin-bottom: 20px;}
+.services .four p{font-size: 18px;}
+
+
+
+
+.Portfolio{padding: 100px 0;}
+.Portfolio hr{background-color:#EB2405;  height: 1px;  margin: 3px auto; border: none;}
+.Portfolio .one{width: 70px;}
+.Portfolio .two{width: 160px;}
+.Portfolio .three{width: 70px; margin-bottom: 40px;}
+.Portfolio h1{text-align: center; margin-bottom: 10px; font-size: 40px;}
+.Portfolio ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.Portfolio ul li:first-child{color: #EB2405;}
+.Portfolio ul li{margin: 0 15px; cursor: pointer;}
+.Portfolio .six{
+    height: 600px;                /*Question: if no height-not seperate btw 2rows*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.Portfolio .six .face{width: 31.5%; position: relative;}
+.Portfolio .six .face img{
+     width: 100%;
+     height: 100%;    
+}
+.Portfolio .six .face div{
+    background-color: rgba(48, 40, 40, 0.5);
+    transition: 0.5s ease;
+    width: 100%;
+    height: 100%;                /*why this div looks higher than img! although 100%*/        
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.Portfolio .six .face i{font-size: 20px; color: #EB2405; position: absolute; bottom: 10px; right: 10px;}
+.Portfolio .six .face div:hover{ opacity: 1;}
+
+
+.counting{background-color: #F0F0F0;}
+.counting .count{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 0;
+}
+.counting .count div{width: 30%;}
+.counting .count i{font-size: 25px; color:#EB2405; margin-bottom: 10px;}
+.counting .count h2{margin-bottom: 10px;}
+.counting .count h3{font-size: 15px;}
+
+
+
+.feedback{padding: 100px 0;}
+.feedback hr{background-color:#EB2405;  height: 1px;  margin: 3px auto; border: none;}
+.feedback .one{width: 70px;}
+.feedback .two{width: 160px;}
+.feedback .three{width: 70px; margin-bottom: 40px;}
+.feedback h1{text-align: center; margin-bottom: 10px; font-size: 40px;}
+.feedback .box{width: 70%; margin: 0 auto; border-radius: 5px;  background-color: #F0F0F0; position: relative; overflow: hidden; }
+.feedback .box img{ width: 100px; z-index: 2; border-radius: 50%; position: absolute; top:50px; left:50px;}
+.feedback .box .slope{position: absolute; z-index: 1; background-color: #EB2405; height: 300px; width: 300px; transform: rotate(45deg); top: -180px; left: -150px;} 
+.feedback .box .info{margin-left: 20%; padding: 50px 0;}
+.feedback .box .info h2{margin-bottom: 10px;}
+.feedback .box .info h3{margin-bottom: 10px; opacity: 0.5; font-size: 15px;}
+.feedback .box .info P{width: 90%; font-size: 18px; font-style: italic; opacity: 0.8; margin-bottom: 20px;}
+.feedback .box .info .stars {color: #e8b923;}
+
+
+.blog{padding: 100px 0; background-color: #F0F0F0;}
+.blog hr{background-color:#EB2405;  height: 1px;  margin: 3px auto; border: none;}
+.blog .one{width: 70px;}
+.blog .two{width: 160px;}
+.blog .three{width: 70px; margin-bottom: 40px;}
+.blog h1{text-align: center; margin-bottom: 10px; font-size: 40px;}
+.blog .boxes{display: flex; justify-content: space-between;}
+.blog .boxes .box{width: 31%; background-color: white;}
+.blog .boxes .box .little-right{padding-left: 20px;}
+.blog .boxes .box img{width: 100%; margin-bottom: 15px;}
+.blog .boxes .box video{width: 100%; margin-bottom: 15px;}
+.blog .boxes .box h3{margin-bottom: 15px; font-weight: lighter;}
+.blog .boxes .box h2{margin-bottom: 15px; transition: 0.5s ease;}
+.blog .boxes .box p{margin-bottom: 15px; font-size: 18px; opacity: 0.9;}
+.blog .boxes .box h4{margin-bottom: 25px;  font-weight: lighter; transition: 0.2s ease;}
+.blog .boxes .box h4 i{margin-left: 10px;}
+
+.blog .boxes .box h2:hover{color: #EB2405; cursor: pointer;}
+.blog .boxes .box h4:hover{color: #EB2405; cursor: pointer;}
+
+
+
+.contact{padding: 100px 0;}
+.contact hr{background-color:#EB2405;  height: 1px;  margin: 3px auto; border: none;}
+.contact .one{width: 70px;}
+.contact .two{width: 160px;}
+.contact .three{width: 70px; margin-bottom: 40px;}
+.contact h1{text-align: center; margin-bottom: 10px; font-size: 40px;}
+.contact form{height: 300px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;}
+.contact form input{width: 48%; height: 40px; border-radius: 5px; padding-left: 10px; font-size: 15px; border: 1px solid rgba(104, 100, 100, 0.507);}
+.contact form input:focus{outline: none; border-radius: 5px; border: 1px solid #EB2405;}
+.contact form input:nth-child(3){width: 100%;}
+.contact form textarea{width: 100%; height: 90px; border-radius: 5px; padding-left: 10px; padding-top: 5px; font-size: 15px;}
+.contact form textarea:focus{outline: none; border-radius: 5px; border: 1px solid #EB2405;}
+.contact form button{transition: 0.5s; color: white; border: none; background-color: #fe305a; padding: 10px 25px; font-size: 1em; border-radius: 5px;}
+.contact form button:hover{cursor: pointer; background-color: #EB2405;}
+
+
+.final{background-color: #323232; color: white; text-align: center; padding: 60px 0;}
+.final i{margin: 0 10px 15px;}
+.final i:hover{color: #EB2405; cursor: pointer; transition: 0.2s ease;}
+.final p span{color:rgb(226, 82, 60);}
+.final p span:hover{text-decoration: underline; cursor: pointer;}
